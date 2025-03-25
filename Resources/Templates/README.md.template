@@ -1,15 +1,15 @@
-# AIDEV-Website
+# ${ProjectName}
 
 ## Overview
 
-A new project created with AIDEV-ProjectSetup
+${Description}
 
 ## Project Structure
 
 This project follows the Project Himalaya organization standards.
 
 ```
-AIDEV-Website/
+${ProjectName}/
 ├── Core/
 ├── Docs/
 │   └── API/
@@ -20,13 +20,11 @@ AIDEV-Website/
 ## Installation
 
 1. Clone the repository:
-   
    ```
-   git clone https://github.com/CallMeChewy/AIDEV-Website.git
+   git clone https://github.com/${GitHubAccount}/${RepositoryName}.git
    ```
 
 2. Install dependencies:
-   
    ```
    pip install -r requirements.txt
    ```
@@ -41,7 +39,7 @@ This project is licensed under the terms specified in the LICENSE file.
 
 ## Author
 
-Herbert J. Bowers
+${Author}
 
 ---
 
