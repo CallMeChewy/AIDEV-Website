@@ -1,0 +1,5 @@
+# Project dependencies
+# Add your dependencies here
+sqlite3
+pyside6
+python-dotenv
