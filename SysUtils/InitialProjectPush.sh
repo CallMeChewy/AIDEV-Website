@@ -91,9 +91,40 @@ git commit -m "Initial commit"
 # Add remote repository if it doesn't exist
 if ! git remote | grep -q "origin"; then
   echo "Adding remote repository..."
-  git remote add origin "https://github.com/CallMeChewy/$REPO_NAME.git"
+  
+  # Try to use SSH first (if key exists)
+  if [ -f ~/.ssh/id_rsa.pub ] || [ -f ~/.ssh/id_ed25519.pub ]; then
+    git remote add origin "git@github.com:CallMeChewy/$REPO_NAME.git"
+    echo "Added SSH remote URL."
+  else
+    # If no SSH key, try to use PAT from .env file
+    if [ -f .env ] && grep -q "GITHUB_PAT" .env; then
+      # Extract PAT from .env file
+      GITHUB_PAT=$(grep GITHUB_PAT .env | cut -d= -f2)
+      git remote add origin "https://$GITHUB_PAT@github.com/CallMeChewy/$REPO_NAME.git"
+      echo "Added HTTPS remote URL with PAT."
+    else
+      # Fallback to regular HTTPS
+      git remote add origin "https://github.com/CallMeChewy/$REPO_NAME.git"
+      echo "Added HTTPS remote URL."
+    fi
+  fi
 else
-  echo "Remote repository already exists."
+  echo "Remote repository already exists. Updating URL..."
+  
+  # Check for SSH key or PAT and update accordingly
+  if [ -f ~/.ssh/id_rsa.pub ] || [ -f ~/.ssh/id_ed25519.pub ]; then
+    git remote set-url origin "git@github.com:CallMeChewy/$REPO_NAME.git"
+    echo "Updated to SSH remote URL."
+  else
+    # If no SSH key, try to use PAT from .env file
+    if [ -f .env ] && grep -q "GITHUB_PAT" .env; then
+      # Extract PAT from .env file
+      GITHUB_PAT=$(grep GITHUB_PAT .env | cut -d= -f2)
+      git remote set-url origin "https://$GITHUB_PAT@github.com/CallMeChewy/$REPO_NAME.git"
+      echo "Updated to HTTPS remote URL with PAT."
+    fi
+  fi
 fi
 
 # Push to GitHub
