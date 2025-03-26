@@ -1,0 +1,84 @@
+(
+AIDEV-Website
+├── AddThese
+├── AddTheseNow
+├── API
+├── Core
+├── Databases
+├── Docs
+│   ├── API
+│   ├── KnowledgeDatabaseIndex
+│   │   ├── 00-00 INDEX-DocumentMaster.md
+│   │   ├── 00-10 GUIDE-DocumentMap.md
+│   │   ├── 00-20 STATUS-ProjectHimalaya.md
+│   │   ├── 00-40 LOG-Decisions.md
+│   │   ├── 00-60 GUIDE-ActiveSessions.md
+│   │   ├── 10-10 Project Himalaya: Strategic Roadmap & Evolution Plan.md
+│   │   ├── 10-20 Project Himalaya: Vision Document.md
+│   │   ├── 10-30 Project Himalaya: Comprehensive Scope Definition.md
+│   │   ├── 10-40 Project Himalaya: Comprehensive Scope Definition.md
+│   │   ├── 20-10 STANDARD-AIDEV-PascalCase Standards 1.6.md
+│   │   ├── 20-20 STANDARD-AUTHORSHIP.md
+│   │   ├── 20-30 STANDARD-FoundationDesignPrinciples.md
+│   │   ├── 20-40 SPEC-DocumentManager.md
+│   │   ├── 20-50 STANDARD-DatabaseSchema.md
+│   │   ├── 30-10 TEMPLATE-Component Plan.md
+│   │   ├── 30-20 SPEC-[ComponentName].md
+│   │   ├── 30-30 REF-[SubProjectName].md
+│   │   ├── 30-40 TEMPLATE-Project Himalaya: Session Continuity.md
+│   │   ├── 40-20 Project Knowledge Database Structure.md
+│   │   ├── 40-30 STANDARD-MetadataSchema.md
+│   │   ├── 50-10 IMPL-DocumentManager.md
+│   │   ├── 60-50a STANDARD-AutomatedTesting.md
+│   │   └── 60-50 TEMPLATE-TestCase.md
+│   └── Notes
+│       └── 2025-03-25
+│           ├── AIDEV-ProjectSetup Path.txt
+│           ├── AIDEV-ProjectSetup Project Structure.md
+│           ├── AIDEV-ProjectSetup: Session Continuity Document.md
+│           ├── AIDEV-ProjectSetup Test Automation.md
+│           ├── AIDEV-ProjectSetup: Test Plan.md
+│           └── How to Test Manually.txt
+├── GUI
+├── LICENSE
+├── Notes
+│   └── 2024-03-21
+├── package.json
+├── package-lock.json
+├── README.md
+├── requirements.txt
+├── Resources
+│   ├── Icons
+│   │   └── BowersWorld Icon  (Ttrans).png
+│   ├── Images
+│   │   ├── ProjectHimalayaBanner1.jpg
+│   │   ├── ProjectHimalayaBanner1.webp
+│   │   ├── ProjectHimalayaBanner.png
+│   │   └── ProjectHimalayaBanner.webp
+│   └── Templates
+│       ├── gitignore.template
+│       ├── LICENSE.template
+│       ├── README.md.template
+│       └── requirements-txt.txt
+├── Scripts
+├── setup.sh
+├── SysUtils
+│   ├── AIDEV-DocMManager_Setup.py
+│   ├── BuildDirectories.py
+│   ├── CodebaseSummary.sh
+│   ├── GitPushUpdates.sh
+│   ├── InitialProjectPush.sh
+│   ├── MyDiff.py
+│   └── PushGitHub.sh
+├── TestReports
+│   ├── assets
+│   │   └── style.css
+│   ├── db_report_20250324_172025.txt
+│   ├── html_report_2025-03-24.html
+│   └── test_report_2025-03-24.txt
+├── Tests
+│   ├── Integration
+│   └── Unit
+├── tsconfig.json
+├── UI
+└── Utils

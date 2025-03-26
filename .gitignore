@@ -39,4 +39,5 @@ Temp/
 Logs/
   
 # Special exclusion for directories starting with '..'
-  ..*/
+..*/
+..Exclude
